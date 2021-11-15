@@ -14,6 +14,8 @@ class Brain
         Brain &operator=(const Brain &brain);
 
         void setIdeas();
+        virtual const std::string& getIdeas(int i) const;
+
 
     protected:
         std::string _ideas[100];

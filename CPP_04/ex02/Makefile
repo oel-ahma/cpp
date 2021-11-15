@@ -1,4 +1,4 @@
-SRCS = main.cpp Animal.cpp
+SRCS = main.cpp Animal.cpp Cat.cpp Dog.cpp 
 OBJS = $(SRCS:.cpp=.o)
 
 CC = clang++

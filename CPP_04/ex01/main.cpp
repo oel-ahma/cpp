@@ -1,6 +1,8 @@
 
    
 #include "Animal.hpp"
+#include "Dog.hpp"
+#include "Cat.hpp"
 #include <unistd.h>
 
 # define BLUE "\e[0;34m"
@@ -28,14 +30,13 @@ int main()
 	Cat* test = new Cat;
 	Cat* copy = new Cat(*test);
 
-	// Display Ideas.
 	std::cout << test->getBrain() << std::endl;
 	delete test;
 	sleep(1);
 
 	std::cout << GREEN << "Now that the original is deleted, let's see the ideas of the copy :" << RESET << std::endl;
 	sleep(2);
-	// Display Ideas.
+	
 	std::cout << copy->getBrain() << std::endl;
 	delete copy;
 
@@ -45,15 +46,13 @@ int main()
 	Dog* test2 = new Dog;
 	Dog* copy2 = new Dog(*test2);
 
-	// Display Ideas.
 	std::cout << test2->getBrain() << std::endl;
 	delete test2;
 	sleep(1);
 
 	std::cout << GREEN << "Now that the original is deleted, let's see the ideas of the copy :" << RESET << std::endl;
 	sleep(2);
-	// Display Ideas.
+	
 	std::cout << copy2->getBrain() << std::endl;
 	delete copy2;
-	while(1);
 }

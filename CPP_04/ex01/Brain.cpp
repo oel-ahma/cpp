@@ -25,12 +25,17 @@ Brain &Brain::operator=(const Brain &other) {
 	return *this;
 }
 
+const std::string& Brain::getIdeas(int i) const
+{
+	return (this->_ideas[i]);
+}
+
 std::ostream &operator<<(std::ostream &out, const Brain &brain) {
-	out << "[ ";
+	out << "[";
 	for(int i = 0; i < 100; ++i) {
-		out << brain._ideas[i] << " ,";
+		out << brain.getIdeas(i) << " ,";
 	}
-	out << " ]" << std::endl;
+	out << "]" << std::endl;
 	return out;
 }
 
@@ -47,7 +52,9 @@ void Brain::setIdeas() {
 	int i = 0;
 	while(std::getline(ss, word, ',') && i < 100)
 		_ideas[i++] = word;
-	if (i<100)
+	if (i < 100)
+	{
 		while(i < 100)
 			_ideas[i++] = "No Idea.";
+	}
 }

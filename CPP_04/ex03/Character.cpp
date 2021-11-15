@@ -53,5 +53,5 @@ void Character::use(int idx, ICharacter &target) {
 }
 
 bool operator==(const Character& lhs, const Character& rhs) {
-	return lhs._name == rhs._name;
+	return lhs.getName() == rhs.getName();
 }
